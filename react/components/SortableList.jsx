@@ -25,18 +25,18 @@ const ItemsList = SortableContainer(({ items, renderData, }) => {
 })
 
 export default class WayPointsList extends React.Component {
-  static propTypes = {
-  	items: PropTypes.array.isRequired,
-  	onOrderChange: PropTypes.func.isRequired,
-  	renderData: PropTypes.func.isRequired,
-  }
+	static propTypes = {
+		items: PropTypes.array.isRequired,
+		onOrderChange: PropTypes.func.isRequired,
+		renderData: PropTypes.func.isRequired,
+	}
 
-  onSortEnd = ({ oldIndex, newIndex, }) => {
-  	this.props.onOrderChange(arrayMove(this.props.items, oldIndex, newIndex))
-  }
+	onSortEnd = ({ oldIndex, newIndex, }) => {
+		this.props.onOrderChange(arrayMove(this.props.items, oldIndex, newIndex))
+	}
 
-  render() {
-  	const { items, renderData, } = this.props
-  	return <ItemsList items={items} onSortEnd={this.onSortEnd} renderData={renderData} />
-  }
+	render() {
+		const { items, renderData, } = this.props
+		return <ItemsList items={items} onSortEnd={this.onSortEnd} renderData={renderData} />
+	}
 }
