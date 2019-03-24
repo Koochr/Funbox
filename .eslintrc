@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "env": {
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2016
+  },
+  "rules": {
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "default-case": "off",
+    "no-plusplus": "off",
+    "react/destructuring-assignment": 0,
+    "react/no-direct-mutation-state": 0,
+    "react/no-array-index-key": 0,
+    "prefer-promise-reject-errors": "error",
+    "react/prop-types": 0,
+    "react/button-has-type": 0,
+    "react/require-default-props": 0,
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "ignoreDOMComponents": false,
+        "allowArrowFunctions": true,
+        "allowFunctions": false,
+        "allowBind": false
+      }
+    ],
+    "no-underscore-dangle": "error",
+    "object-curly-spacing": ["error", "always"],
+    "react/forbid-prop-types": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "fetch": true
+  },
+  "parser": "@typescript-eslint/parser"
+}
